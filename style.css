@@ -6,8 +6,8 @@ body{
 #etchTilesBoxElement{
     display: flex;
     flex-wrap: wrap;
-    height: 91vh;
-    width: 91vh;
+    height: 225px;
+    width: 225px;
     background-color: #767676;
 }
 .tile{
@@ -16,4 +16,7 @@ body{
     padding: 0;
     border-style: solid;
     border-width: 0.001px;
+}
+.tile :hover{
+    background-color: black;
 }

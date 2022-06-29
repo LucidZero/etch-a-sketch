@@ -11,15 +11,17 @@ by certain amount.
 */
 
 let etchTilesBox = document.querySelector("#etchTilesBoxElement");
-let inputTiles = 10;
+let inputTiles = 16;
 let numberOfTiles = inputTiles * inputTiles;
 let widthHeightTile;
 
 
-viewportWidthHeight();
-console.log(widthHeightTile);
 
+if (inputTiles<=100){
 generateTiles();
+} else{
+    /*in input slot make it say "only tiles between 1 and 100" */
+}
 function generateTiles(){
 for (i=0; i <numberOfTiles; i++){
 /*generate a div class="tile" that will have a width and height of widthHeightTile
@@ -28,15 +30,22 @@ that on hover change color
 
 const div = document.createElement("div");
 div.classList.add("tile");
-div.style.width = widthHeightTile + "px";
-div.style.height = widthHeightTile + "px";
+div.style.width = (225 / inputTiles) -0.5 + "px";
+div.style.height = (225 / inputTiles) -0.5 + "px";
 document.querySelector("#etchTilesBoxElement").appendChild(div);
 };
 
 };
 
 
-/* ""= VH / userinput" to generate width and height of boxes*/
+
+
+
+
+
+/* ""= VH / userinput" to generate width and height of boxes
+IT DOESN'T WORK WELL LEAVING IN FOR LATER IMPLEMENTATION
+*/
 function viewportWidthHeight(){
     let viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     let oneTenthOfViewportHeight = viewPortHeight / 10; 
