@@ -19,15 +19,12 @@ let tileHover = document.querySelector(".tile");
 
 
 
-function onHoverChangeBgColor(){
-    document.querySelector(".tile").style.BackgroundColor = "black";
-};
 
 if (inputTiles<=100){
     generateTiles();
     } else{
         /*in input slot make it say "only tiles between 1 and 100" */
-    };
+    }
 
 /*generate a div class="tile" that will have a width and height of widthHeightTile
 that on hover change color
@@ -36,41 +33,37 @@ function generateTiles(){
 for (i=0; i <numberOfTiles; i++){
 const div = document.createElement("div");
 div.classList.add("tile");
-div.style.width = (225 / inputTiles) -0.5 + "px";
-div.style.height = (225 / inputTiles) -0.5 + "px";
+div.style.width = (320 / inputTiles) - 0.8 + "px";
+div.style.height = (320 / inputTiles) - 0.8 + "px";
 document.querySelector("#etchTilesBoxElement").appendChild(div);
-
-};
-
-};
+}
+}
 
 
-document.querySelectorAll(".tile").onmouseover = function() {mouseOver()}
-document.querySelectorAll(".tile").onmouseout = function() {mouseOut()}
+etchTilesBox.addEventListener('mouseover', tileHovering);
 
+
+function tileHovering(evt) {
+    if (evt.target.nodeName === "div")
+        console.log("Responding")
+     else {
+        console.log("not responding")
+    }
+}
+
+
+
+
+/*function tileHovering(){
+document.querySelector(".tile").onmouseover = function() {mouseOver()};
+document.querySelector(".tile").onmouseout = function() {mouseOut()};
+        
 function mouseOver() {
-    document.querySelectorAll(".tile").style.backgroundColor = "black";
-};
-
+    document.querySelector(".tile").style.backgroundColor = "red";
+}
+        
 function mouseOut() {
-    document.querySelectorAll(".tile").style.backgroundColor = "black";
-};
+    document.querySelector(".tile").style.backgroundColor = "white";
+}
+}*/
 
-
-/* ""= VH / userinput" to generate width and height of boxes
-IT DOESN'T WORK WELL LEAVING IN FOR LATER IMPLEMENTATION
-*/
-function viewportWidthHeight(){
-    let viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-    let oneTenthOfViewportHeight = viewPortHeight / 10; 
-    console.log(oneTenthOfViewportHeight)
-    const etchTilesBox = document.querySelector("#etchTilesBoxElement"); 
-    widthHeightTile = (viewPortHeight - oneTenthOfViewportHeight) / inputTiles;
-    etchTilesBox.style.width = ((viewPortHeight - oneTenthOfViewportHeight) + inputTiles/2) + "px";
-    etchTilesBox.style.height = ((viewPortHeight - oneTenthOfViewportHeight) + inputTiles/2)+ "px";
-    return widthHeightTile;
-}; 
-
-
-
-    // your code 

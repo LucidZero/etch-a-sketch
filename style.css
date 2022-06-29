@@ -2,13 +2,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
 }
 #etchTilesBoxElement{
     display: flex;
     flex-wrap: wrap;
-    height: 0px;
-    width: 225px;
+    height: 320px;
+    width: 320px;
     background-color: #767676;
+    border-style: solid;
 }
 .tile{
     background-color: #e6e6e6;
