@@ -1,0 +1,19 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#etchTilesBoxElement{
+    display: flex;
+    flex-wrap: wrap;
+    height: 91vh;
+    width: 91vh;
+    background-color: #767676;
+}
+.tile{
+    background-color: #e6e6e6;
+    margin: 0;
+    padding: 0;
+    border-style: solid;
+    border-width: 0.001px;
+}
