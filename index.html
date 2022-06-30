@@ -10,17 +10,26 @@
 </head>
 
 <body>
-
+<div id="leftSide">
     <div id="chooseNumberOfTiles">
-        <form action="/action_page.php">
-           Choose number of tiles: <input type="number" name="chooseTiles" id="chooseTiles" onfocus="this.value=''"> <br>
+        <form>
+           Choose number of tiles: <input type="number" name="chooseTiles" id="chooseTiles" value = "16" onfocus="this.value=''">
            <input type="button" onclick="checkIfUserInputValid(document.getElementById('chooseTiles').value)" value='Submit'>
          </form>
-       </div>
     </div>
-    <div id="chooseColorOfTiles">
 
+    <div id="chooseColorOfTiles">
+        <label for="colorsOfTiles">Choose a color of tiles:</label>
+            <select id="colorPicker" name="colorPicker">
+            <option value="rgb(48, 48, 48)">Black</option>
+            <option value="green">Green</option>
+            <option value="orange">Orange</option>
+            <option value="bandw">B & W</option>
+            <option value="gandm">G & M</option>
+            <option value="rainbow">Rainbow</option>
+            </select>
     </div>
+</div>
 
     <div id="etchTilesBoxElement">
 
