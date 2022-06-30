@@ -1,6 +1,6 @@
 body{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin-top: 30px;
 }
@@ -9,8 +9,11 @@ body{
     flex-wrap: wrap;
     height: 320px;
     width: 320px;
+    min-width: 320px;
     background-color: #767676;
     border-style: solid;
+    justify-self: center;
+    margin: 1px;
 }
 .tile{
     background-color: #e6e6e6;
@@ -22,4 +25,17 @@ body{
 .tile:hover{
     background-color: black;
     transition: 0s;
+}
+#chooseNumberOfTiles{
+    width: 300px;
+}
+
+input[type=number] {
+-moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+
+-webkit-appearance: none;
+margin: 0;
 }

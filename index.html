@@ -6,13 +6,25 @@
     <script src="javascript.js" defer></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etch-a-Sketch</title>
 </head>
 
 <body>
-    <div id="etchTilesBoxElement">
+
+    <div id="chooseNumberOfTiles">
+        <form action="/action_page.php">
+           Choose number of tiles: <input type="number" name="chooseTiles" id="chooseTiles" onfocus="this.value=''"> <br>
+           <input type="button" onclick="checkIfUserInputValid(document.getElementById('chooseTiles').value)" value='Submit'>
+         </form>
+       </div>
+    </div>
+    <div id="chooseColorOfTiles">
 
     </div>
+
+    <div id="etchTilesBoxElement">
+
+
 </body>
 
 </html>
