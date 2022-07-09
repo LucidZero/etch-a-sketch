@@ -42,8 +42,8 @@ let numberOfTiles = inputTiles * inputTiles;
 for (i=0; i <numberOfTiles; i++){
 const div = document.createElement("div");
 div.classList.add("tile");
-div.style.width = (320 / inputTiles) - 2 + "px";
-div.style.height = (320 / inputTiles) - 2 + "px";
+div.style.width = (900 / inputTiles) - 2 + "px";
+div.style.height = (900 / inputTiles) - 2 + "px";
 document.querySelector("#etchTilesBoxElement").appendChild(div);
 }
 }

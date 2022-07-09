@@ -9,8 +9,8 @@ body{
 #etchTilesBoxElement{
     display: flex;
     flex-wrap: wrap;
-    height: 320px;
-    width: 320px;
+    height: 900px;
+    width: 900px;
     min-width: 320px;
     background-color: #767676;
     border-style: solid;
